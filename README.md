@@ -33,9 +33,9 @@ Knowledge-based visual question answering (KB-VQA) requires models to combine vi
 
 We propose **Wiki-PRF**, a three-stage framework:
 
-- **Processing**: Dynamically invokes visual tools to extract precise multimodal cues for querying.
-- **Retrieval**: Integrates visual and text features to retrieve relevant knowledge.
-- **Filtering**: Filters out irrelevant or low-quality results using reinforcement learning rewards based on answer accuracy and format consistency.
+- 🔍 **Processing**: Dynamically invokes visual tools to extract precise multimodal cues for querying.  
+- 📚 **Retrieval**: Integrates visual and text features to retrieve relevant knowledge.  
+- 🧹 **Filtering**: Filters out irrelevant or low-quality results using reinforcement learning rewards based on answer accuracy and format consistency.
 
 Our method significantly improves performance on E-VQA and InfoSeek, achieving new state-of-the-art results.
 
@@ -47,13 +47,13 @@ Our method significantly improves performance on E-VQA and InfoSeek, achieving n
 
 Our framework consists of three main components:
 
-1. **Processing Module**  
+1. **🔍 Processing Module**  
    Uses vision-language tools to generate accurate, grounded queries for knowledge retrieval.
 
-2. **Multimodal Retrieval Module**  
+2. **📚 Multimodal Retrieval Module**  
    Combines image and text embeddings to retrieve top-k relevant passages from a knowledge base.
 
-3. **Filtering & Refinement Module**  
+3. **🧹 Filtering & Refinement Module**  
    Applies RL-based filtering to discard noisy context and refine the final answer generation.
 
 ---
