@@ -16,3 +16,4 @@ This repository provides the official PyTorch implementation for Wiki-PRF, a nov
 ## 🔥 What's New
 
 - **(2025.9.19)** 🎉 Our paper (Wiki-PRF) is accepted as **Neurlps 2025**!
+- **(2025.10.17)** 📄 Paper released on arXiv
