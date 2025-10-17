@@ -4,6 +4,8 @@
 [![Python](https://img.shields.io/badge/Python-3.10+-blue)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.16+-orange)](https://pytorch.org/)
 
+This repository provides the official PyTorch implementation for Wiki-PRF, a novel three-stage method for Knowledge-Based Visual Question Answering (KB-VQA). Wiki-PRF consists of Processing, Retrieval, and Filtering stages that dynamically extract multimodal cues, perform joint visual-text knowledge retrieval, and filter irrelevant results. The model is trained with reinforcement learning using answer accuracy and format consistency as reward signals. It achieves state-of-the-art performance on E-VQA and InfoSeek and has been accepted at NeurIPS 2025.
+
 ## 🪵 TODO List
 
 - [ ] 🔄 Release core implementation
