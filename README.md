@@ -43,7 +43,7 @@ Our method significantly improves performance on E-VQA and InfoSeek, achieving n
 
 ## 🏗️ Architecture
 
-![Wiki-PRF Architecture](/assets/guanggap)
+![Wiki-PRF Architecture](/assets/main.png)
 
 Our framework consists of three main components:
 
