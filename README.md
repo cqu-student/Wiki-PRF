@@ -58,15 +58,6 @@ Our framework consists of three main components:
 
 ---
 
-## ✅ Key Features
-
-- ✅ Dynamic tool invocation for precise query formulation  
-- ✅ Joint visual-text retrieval for better context matching  
-- ✅ Reinforcement learning with dual rewards: answer accuracy + format consistency  
-- ✅ State-of-the-art performance on E-VQA and InfoSeek  
-
----
-
 ## 📊 Results
 
 | Model        | E-VQA | InfoSeek |
