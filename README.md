@@ -60,11 +60,56 @@ Our framework consists of three main components:
 
 ## 📊 Results
 
-| Model        | E-VQA | InfoSeek |
-|--------------|-------|----------|
-| Wiki-PRF     | **36.0** | **42.8** |
+## 📊 Main Results on E-VQA and InfoSeek
 
-*(All numbers are exact scores from our paper.)*
+*All values are accuracy (%). Best results in **bold**, second best <u>underlined</u>.*
+
+### Zero-shot MLLMs
+| Method                              | Model               | Retriever | E-VQA (Single-Hop) | E-VQA (All) | InfoSeek (Unseen-Q) | InfoSeek (Unseen-E) | InfoSeek (All) |
+|------------------------------------|---------------------|-----------|---------------------|-------------|----------------------|----------------------|----------------|
+| BLIP-2 [^li2023blip]               | Flan-T5<sub>XL</sub> | –         | 12.6                | 12.4        | 12.7                 | 12.3                 | 12.5           |
+| InstructBLIP [^dai2023instructblip]| Flan-T5<sub>XL</sub> | –         | 11.9                | 12.0        | 8.9                  | 7.4                  | 8.1            |
+| LLaVA-v1.5 [^liu2024improved]      | Vicuna-7B           | –         | 16.3                | 16.9        | 9.6                  | 9.4                  | 9.5            |
+| GPT-4V [^achiam2023gpt]            | –                   | –         | 26.9                | 28.1        | 15.0                 | 14.3                 | 14.6           |
+| Qwen2.5-VL-3B (Base) [^bai2025qwen2] | –                 | –         | 17.9                | 19.6        | 20.4                 | 21.9                 | 21.4           |
+| Qwen2.5-VL-7B (Base) [^bai2025qwen2] | –                 | –         | 21.7                | 20.3        | 22.8                 | 24.1                 | 23.7           |
+
+### Retrieval-Augmented Models
+| Method                     | Model                    | Retriever               | E-VQA (Single-Hop) | E-VQA (All) | InfoSeek (Unseen-Q) | InfoSeek (Unseen-E) | InfoSeek (All) |
+|---------------------------|--------------------------|-------------------------|---------------------|-------------|----------------------|----------------------|----------------|
+| DPR<sub>V+T</sub> [^lerner2024cross] | Multi-passage BERT   | CLIP ViT-B/32           | 29.1                | –           | –                    | –                    | 12.4           |
+| RORA-VLM [^Qi2024RoRAVLMRR] | Vicuna-7B              | CLIP + Google Search    | –                   | 20.3        | 25.1                 | 27.3                 | –              |
+| EchoSight [^yan2024echosight] | Mistral-7B / LLaMA-3-8B | EVA-CLIP-8B           | 19.4                | –           | –                    | –                    | 27.7           |
+| Wiki-LLaVA [^caffagni2024wiki] | Vicuna-7B            | CLIP ViT-L/14 + Contriever | 17.7             | 20.3        | 30.1                 | 27.8                 | 28.9           |
+| ReflectiVA [^cocchi2024augmenting] | LLaMA-3.1-8B       | EVA-CLIP-8B             | 28.0                | 29.2        | 40.4                 | 39.8                 | 40.1           |
+| MMKB-RAG [^ling2025mmkb]   | LLaMA-3.1-8B            | EVA-CLIP-8B             | **39.7**            | 35.9        | 36.4                 | 36.3                 | 36.4           |
+| VLM-PRF (w/o RL)           | Qwen-2.5VL-3B           | EVA-CLIP-8B             | 26.6                | 25.6        | 34.2                 | 33.7                 | 34.0           |
+| VLM-PRF (w/o RL)           | Qwen-2.5VL-7B           | EVA-CLIP-8B             | 28.9                | 28.6        | 40.0                 | 39.4                 | 39.5           |
+
+### Retrieval-Augmented Models with Reinforcement Learning (Ours)
+| Method            | Model             | Retriever       | E-VQA (Single-Hop) | E-VQA (All) | InfoSeek (Unseen-Q) | InfoSeek (Unseen-E) | InfoSeek (All) |
+|-------------------|-------------------|-----------------|---------------------|-------------|----------------------|----------------------|----------------|
+| VLM-PRF (**Ours**) | LLaMA-3.1-8B     | EVA-CLIP-8B     | 36.3                | 35.5        | 41.3                 | 40.6                 | 40.8           |
+| VLM-PRF (**Ours**) | Qwen-2.5VL-3B    | EVA-CLIP-8B     | 31.1                | 32.4        | 39.7                 | 38.8                 | 39.0           |
+| VLM-PRF (**Ours**) | Qwen-2.5VL-7B    | EVA-CLIP-8B     | 37.1                | **36.0**    | **43.3**             | **42.7**             | **42.8**       |
+| VLM-PRF (**Ours**) | InternVL3-8B     | EVA-CLIP-8B     | **40.1**            | **39.2**    | **43.5**             | <u>42.1</u>          | <u>42.5</u>    |
+
+> **Note**:  
+> - `–` indicates results not reported.  
+> - Best scores in **bold**, second best in <u>underlined</u>.  
+> - † denotes methods using external search or non-standard retrieval.
+
+[^li2023blip]: Li et al., *BLIP-2*, ICML 2023.  
+[^dai2023instructblip]: Dai et al., *InstructBLIP*, CVPR 2023.  
+[^liu2024improved]: Liu et al., *LLaVA-v1.5*, 2024.  
+[^achiam2023gpt]: Achiam et al., *GPT-4 Technical Report*, 2023.  
+[^bai2025qwen2]: Bai et al., *Qwen2.5-VL*, 2025.  
+[^lerner2024cross]: Lerner et al., *DPR<sub>V+T</sub>*, 2024.  
+[^Qi2024RoRAVLMRR]: Qi et al., *RoRA-VLM*, 2024.  
+[^yan2024echosight]: Yan et al., *EchoSight*, 2024.  
+[^caffagni2024wiki]: Caffagni et al., *Wiki-LLaVA*, 2024.  
+[^cocchi2024augmenting]: Cocchi et al., *ReflectiVA*, 2024.  
+[^ling2025mmkb]: Ling et al., *MMKB-RAG*, 2025.
 
 ---
 
