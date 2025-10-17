@@ -17,3 +17,69 @@ This repository provides the official PyTorch implementation for Wiki-PRF, a nov
 
 - **(2025.9.19)** 🎉 Our paper (Wiki-PRF) is accepted as **Neurlps 2025**!
 - **(2025.10.17)** 📄 Paper released on arXiv
+
+# 🧠 Wiki-PRF: A Three-Stage Framework for Knowledge-Based Visual Question Answering
+
+> Official PyTorch implementation of Wiki-PRF, accepted at NeurIPS 2025.
+
+![Performance Comparison](image.png)  
+*Wiki-PRF achieves state-of-the-art results on KB-VQA benchmarks.*
+
+---
+
+## 📌 Abstract
+
+Knowledge-based visual question answering (KB-VQA) requires models to combine visual understanding with external knowledge. While retrieval-augmented generation (RAG) helps, it often suffers from poor multimodal queries and noisy retrieved content.  
+
+We propose **Wiki-PRF**, a three-stage framework:
+
+- **Processing**: Dynamically invokes visual tools to extract precise multimodal cues for querying.
+- **Retrieval**: Integrates visual and text features to retrieve relevant knowledge.
+- **Filtering**: Filters out irrelevant or low-quality results using reinforcement learning rewards based on answer accuracy and format consistency.
+
+Our method significantly improves performance on E-VQA and InfoSeek, achieving new state-of-the-art results.
+
+---
+
+## 🏗️ Architecture
+
+![Wiki-PRF Architecture](image.png)
+
+Our framework consists of three main components:
+
+1. **Processing Module**  
+   Uses vision-language tools to generate accurate, grounded queries for knowledge retrieval.
+
+2. **Multimodal Retrieval Module**  
+   Combines image and text embeddings to retrieve top-k relevant passages from a knowledge base.
+
+3. **Filtering & Refinement Module**  
+   Applies RL-based filtering to discard noisy context and refine the final answer generation.
+
+---
+
+## ✅ Key Features
+
+- ✅ Dynamic tool invocation for precise query formulation  
+- ✅ Joint visual-text retrieval for better context matching  
+- ✅ Reinforcement learning with dual rewards: answer accuracy + format consistency  
+- ✅ State-of-the-art performance on E-VQA and InfoSeek  
+
+---
+
+## 📊 Results
+
+| Model        | E-VQA | InfoSeek |
+|--------------|-------|----------|
+| Wiki-PRF     | **36.0** | **42.8** |
+
+*(All numbers are exact scores from our paper.)*
+
+---
+
+## 🚀 Get Started
+
+```bash
+git clone https://github.com/yourname/wiki-prf.git
+cd wiki-prf
+pip install -r requirements.txt
