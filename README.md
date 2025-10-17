@@ -22,7 +22,7 @@ This repository provides the official PyTorch implementation for Wiki-PRF, a nov
 
 > Official PyTorch implementation of Wiki-PRF, accepted at NeurIPS 2025.
 
-![Performance Comparison](assets/guanggap.png)  
+![guanggao](assets/guanggap.png)  
 *Wiki-PRF achieves state-of-the-art results on KB-VQA benchmarks.*
 
 ---
