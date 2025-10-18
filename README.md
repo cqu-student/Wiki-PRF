@@ -8,8 +8,9 @@ This repository provides the official PyTorch implementation for Wiki-PRF, a nov
 
 ## 🪵 TODO List
 
-- ✅ Release core implementation
+- ✅ Release core test implementation
 - ✅ Complete README documentation
+- 🔄 Release core train implementation
 - 🔄 Add configuration examples
 - 🔄 Add More detailed Quick Start.
 
