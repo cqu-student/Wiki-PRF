@@ -545,7 +545,7 @@ def main():
     # Checkpoints to evaluate
     steps = 600
     MODEL_PATH = "Qwen2.5-VL-3B-Instruct"
-    #PEFT_MODEL_PATH = f"Qwen2.5-VL-3B-Lora-multitool_v2-infoseek-2k-8h20-4000/checkpoint-{steps}" 
+    #PEFT_MODEL_PATH = f"checkpoint-{steps}" 
     PEFT_MODEL_PATH = f"3b-4k-ckpt600" 
     OUTPUT_PATH = "results_0_"
     BSZ = 2
