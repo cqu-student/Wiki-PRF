@@ -17,7 +17,7 @@ This repository provides the official PyTorch implementation for Wiki-PRF, a nov
 
 ## 🔥 What's New
 
-- **(2026.2.02)** model checkpoint released! 
+- **(2026.2.02)** Model checkpoint released! (Training Data Preparing)
 - **(2025.9.19)** 🎉 Our paper (Wiki-PRF) is accepted as **Neurlps 2025**!
 - **(2025.10.17)** 📄 Paper released on arXiv
 
