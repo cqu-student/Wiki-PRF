@@ -5,7 +5,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.16+-orange)](https://pytorch.org/)
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Model-orange?logo=huggingface&logoColor=white)](https://huggingface.co/hongyuyang23casia/Wiki-PRF-7B-Infoseek)
 
-This repository provides the official PyTorch implementation for Wiki-PRF, a novel three-stage method for Knowledge-Based Visual Question Answering (KB-VQA). Wiki-PRF consists of Processing, Retrieval, and Filtering stages that dynamically extract multimodal cues, perform joint visual-text knowledge retrieval, and filter irrelevant results. The paper has been accepted at NeurIPS 2025.
+This repository provides the official PyTorch implementation for CC-VQA, a novel three-stage method for Knowledge-Based Visual Question Answering (KB-VQA). Wiki-PRF consists of Processing, Retrieval, and Filtering stages that dynamically extract multimodal cues, perform joint visual-text knowledge retrieval, and filter irrelevant results. The paper has been accepted at NeurIPS 2025.
 
 ## 🪵 TODO List
 
@@ -17,10 +17,7 @@ This repository provides the official PyTorch implementation for Wiki-PRF, a nov
 
 ## 🔥 What's New
 
-- **(2026.2.17)** The dataset setting can be found in echosight (https://github.com/Go2Heart/EchoSight)
-- **(2026.2.02)** Model checkpoint released! You can check the Huggingface link to download the model. (Training Data Preparing)
-- **(2025.9.19)** 🎉 Our paper (Wiki-PRF) is accepted as **Neurlps 2025**!
-- **(2025.10.17)** 📄 Paper released on arXiv
+- **(2025.9.19)** 🎉 Our paper (Wiki-PRF) is accepted as **CVPR 2026**!
 
 # 🧠 Wiki-PRF: A Three-Stage Framework for Knowledge-Based Visual Question Answering
 
