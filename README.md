@@ -1,6 +1,6 @@
-# Knowledge-based-Visual-Question-Answering-with-Multimodal-Processing-Retrieval-and-Filtering
-[![arXiv](https://img.shields.io/badge/arXiv-2510.14605-b31b1b.svg)](https://arxiv.org/abs/2510.14605)
-[![Neurlps 2025](https://img.shields.io/badge/Neurlps%202025-Poster-red)]([https://icml.cc/](https://neurips.cc/))
+# CC-VQA: Conflict- and Correlation-Aware Method for \\ Mitigating Knowledge Conflict in Knowledge-Based Visual Question Answering
+[![arXiv](https://img.shields.io/badge/arXiv-2510.14605-b31b1b.svg)]()
+[![CVPR 2026](https://img.shields.io/badge/Neurlps%202025-Poster-red)](https://cvpr.cc/)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.16+-orange)](https://pytorch.org/)
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Model-orange?logo=huggingface&logoColor=white)](https://huggingface.co/hongyuyang23casia/Wiki-PRF-7B-Infoseek)
@@ -9,8 +9,8 @@ This repository provides the official PyTorch implementation for Wiki-PRF, a nov
 
 ## 🪵 TODO List
 
-- ✅ Release core test implementation
-- ✅ Complete README documentation
+- 🔄 Release core test implementation
+- 🔄 Complete README documentation
 - 🔄 Release core train implementation
 - 🔄 Add configuration examples
 - 🔄 Add More detailed Quick Start.
