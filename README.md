@@ -11,14 +11,15 @@ This repository provides the official PyTorch implementation for Wiki-PRF, a nov
 
 - ✅ Release core test implementation
 - ✅ Complete README documentation
-- 🔄 Release core train implementation
+- ✅ Release core train implementation
 - 🔄 Add configuration examples
 - 🔄 Add More detailed Quick Start.
 
 ## 🔥 What's New
 
+- **(2026.2.27)** The core training code has been released. Tell me any problem in the issue.
 - **(2026.2.17)** The dataset setting can be found in echosight (https://github.com/Go2Heart/EchoSight)
-- **(2026.2.02)** Model checkpoint released! You can check the Huggingface link to download the model. (Training Code Preparing)
+- **(2026.2.02)** Model checkpoint released! You can check the Huggingface link to download the model.
 - **(2025.9.19)** 🎉 Our paper (Wiki-PRF) is accepted as **Neurlps 2025**!
 - **(2025.10.17)** 📄 Paper released on arXiv
 
