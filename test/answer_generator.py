@@ -1,3 +1,5 @@
+import os
+
 from openai import OpenAI
 import torch
 from .retriever import WikipediaKnowledgeBaseEntry
@@ -344,7 +346,14 @@ class GPT4AnswerGenerator(AnswerGenerator):
     def __init__(self):
         """Initialize the QuestionGenerator class."""
         super().__init__()
-        self.client = OpenAI(api_key="YOUR_API_KEY")
+        api_key = os.environ.get("OPENAI_API_KEY")
+        if not api_key:
+            raise ValueError(
+                "OPENAI_API_KEY environment variable is not set. "
+                "Please set it before using GPT4AnswerGenerator: "
+                "export OPENAI_API_KEY=<your-api-key>"
+            )
+        self.client = OpenAI(api_key=api_key)
 
     def get_gpt4_answer(self, input):
         """Get the answer from the GPT-4 model.
@@ -422,11 +431,21 @@ class PaLMAnswerGenerator(AnswerGenerator):
             TextEmbeddingModel,
             TextGenerationModel,
         )
-        import os
-
-        os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "YOUR_CREDENTIALS.json"
-        PROJECT_ID = "YOUR_PROJECT_ID"
-        REGION = "YOUR_REGION"
+        google_creds = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
+        if not google_creds:
+            raise ValueError(
+                "GOOGLE_APPLICATION_CREDENTIALS environment variable is not set. "
+                "Please set it to the path of your service account JSON file: "
+                "export GOOGLE_APPLICATION_CREDENTIALS=/path/to/credentials.json"
+            )
+        PROJECT_ID = os.environ.get("GOOGLE_CLOUD_PROJECT")
+        if not PROJECT_ID:
+            raise ValueError(
+                "GOOGLE_CLOUD_PROJECT environment variable is not set. "
+                "Please set it to your Google Cloud project ID: "
+                "export GOOGLE_CLOUD_PROJECT=<your-project-id>"
+            )
+        REGION = os.environ.get("GOOGLE_CLOUD_REGION", "us-central1")
         vertexai.init(project=PROJECT_ID, location=REGION)
         self.model = TextGenerationModel.from_pretrained("text-bison@002")
 

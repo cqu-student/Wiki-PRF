@@ -3,7 +3,7 @@ export LOG_PATH="./debug_log_$RUN_NAME.txt"
 RUN_NAME="Qwen2.5-VL-Baseline-infoseek" 
 
 # Wandb Setting
-WANDB_API_KEY="your key"
+WANDB_API_KEY="${WANDB_API_KEY:?WANDB_API_KEY environment variable is not set. Please export WANDB_API_KEY=<your-key>}"
 wandb login --relogin $WANDB_API_KEY
 export WANDB_PROJECT="grpo-rag"
 export WANDB_NAME=$RUN_NAME

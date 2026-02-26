@@ -101,6 +101,55 @@ Our framework consists of three main components:
 ## 🚀 Get Started
 
 ```bash
-git clone https://github.com/cqu-student/CC-VQA.git
-cd CC-VQA
-pip install -r requirements.txt
+git clone https://github.com/cqu-student/Wiki-PRF.git
+cd Wiki-PRF
+pip install -r test/requirements.txt
+```
+
+### Environment Variables
+
+Some components require API keys. Set them before running:
+
+```bash
+# Required for GPT-4 based answer generation
+export OPENAI_API_KEY=<your-openai-api-key>
+
+# Required for Google PaLM based answer generation
+export GOOGLE_APPLICATION_CREDENTIALS=/path/to/credentials.json
+export GOOGLE_CLOUD_PROJECT=<your-gcp-project-id>
+export GOOGLE_CLOUD_REGION=us-central1  # optional, defaults to us-central1
+
+# Required for training with Weights & Biases logging
+export WANDB_API_KEY=<your-wandb-api-key>
+```
+
+### 🧪 Test (Evaluation)
+
+Run inference and evaluation with the trained model:
+
+```bash
+cd Wiki-PRF
+python test/test.py
+```
+
+Key paths to configure inside `test/test.py`:
+- `MODEL_PATH`: path to the base model (e.g. `Qwen2.5-VL-3B-Instruct`)
+- `PEFT_MODEL_PATH`: path to the fine-tuned LoRA checkpoint
+- `DATA_ROOT`: path to the evaluation data config YAML
+- `IMAGE_ROOT`: path to the image directory
+
+### 🏋️ Train
+
+Launch distributed training with the provided script:
+
+```bash
+cd Wiki-PRF/train
+export WANDB_API_KEY=<your-wandb-api-key>
+bash train.sh
+```
+
+Key paths to configure inside `train/train.sh`:
+- `--model_name_or_path`: path to the base model
+- `--dataset_name`: path to the data config YAML (default: `data_config/rag_data.yaml`)
+- `--image_root`: path to the image directory
+- `--output_dir`: directory to save checkpoints
