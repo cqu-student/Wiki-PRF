@@ -18,7 +18,7 @@ torchrun --nproc_per_node="8" \
     --node_rank="0" \
     --master_addr="127.0.0.1" \
     --master_port="8000" \
-    src/open_r1/grpo_rec.py \
+    ./grpo_wikiprf.py \
     --deepspeed local_scripts/zero2.json \
     --output_dir Path_to_output_dir/$RUN_NAME \
     --model_name_or_path Path_to/Qwen2.5-VL-7B-Instruct \
