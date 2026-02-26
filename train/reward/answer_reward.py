@@ -2,8 +2,8 @@ import os, sys
 sys.path.append(os.getcwd())
 from datetime import datetime
 import re
-from src.open_r1.reward.answer_reward_utils import evaluate_example
-from src.open_r1.reward.answer_reward_utils_evqa import evaluate_example_evqa
+from .reward.answer_reward_utils import evaluate_example
+from .reward.answer_reward_utils_evqa import evaluate_example_evqa
 
 
 def answer_reward_rag(completions, solution, problem, **kwargs):
