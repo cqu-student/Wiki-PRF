@@ -1,0 +1,6 @@
+
+datasets:
+    - data:
+        json_path: ./infoseek/infoseek_train_withkb_wkbcontent_merged.jsonl
+        sampling_strategy: "first"
+        sampling_number: 2000
