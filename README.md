@@ -12,8 +12,7 @@ This repository provides the official PyTorch implementation for Wiki-PRF, a nov
 - ✅ Release core test implementation
 - ✅ Complete README documentation
 - ✅ Release core train implementation
-- 🔄 Add configuration examples
-- 🔄 Add More detailed Quick Start.
+- ✅ Add More detailed Quick Start.
 
 ## 🔥 What's New
 
