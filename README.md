@@ -16,6 +16,7 @@ This repository provides the official PyTorch implementation for Wiki-PRF, a nov
 
 ## 🔥 What's New
 
+- **(2026.2.27)** Our new work has been accepted to CVPR 2026. If you're interested, please click the link (https://arxiv.org/abs/2510.14605) below to learn more.
 - **(2026.2.27)** The core training code has been released. Tell me any problem in the issue.
 - **(2026.2.17)** The dataset setting can be found in echosight (https://github.com/Go2Heart/EchoSight)
 - **(2026.2.02)** Model checkpoint released! You can check the Huggingface link to download the model.
