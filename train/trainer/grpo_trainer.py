@@ -620,6 +620,14 @@ class Qwen2VLGRPOTrainer(Trainer):
                     },
                 ],
             }
+        def make_pre_conversation_grounding_retrieval(search):
+            return { 
+                "role": "user",
+                        "content": [
+                        {"type": "image"},
+                        {"type": "text", "text": "Locate {object}, output its bbox coordinates using JSON format.".format(object=search)},
+                ],
+            }
         # Generate completions
         with unwrap_model_for_generation(model, self.accelerator) as unwrapped_model:
             prompt_completion_ids = unwrapped_model.generate(
